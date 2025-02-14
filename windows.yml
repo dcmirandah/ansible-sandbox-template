@@ -1,0 +1,19 @@
+---
+- name: Ansible Sandbox Playbook (Windows)
+  hosts: windows
+  gather_facts: true
+  become: false
+  vars_prompt:
+    - name: ansible_ssh_user
+      prompt: "Enter SSH user"
+      private: false
+    - name: ansible_ssh_pass
+      prompt: "Enter SSH password"
+      private: true
+
+  tasks:
+    - name: Ping Server
+      ansible.windows.win_ping:
+    - name: Output the system's hostname
+      ansible.builtin.debug:
+        msg: "The system's hostname is {{ ansible_hostname }}"
