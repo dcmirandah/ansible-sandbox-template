@@ -1,0 +1,8 @@
+---
+- name: Ansible Sandbox Playbook (Local)
+  hosts: local
+  gather_facts: true
+  become: false
+
+  roles:
+    - role_dummy

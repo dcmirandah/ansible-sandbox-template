@@ -1,0 +1,12 @@
+---
+- name: Ansible Sandbox Playbook (Local)
+  hosts: local
+  gather_facts: true
+  become: false
+
+  tasks:
+    - name: Ping Server
+      ansible.builtin.ping:
+    - name: Output the system's hostname
+      ansible.builtin.debug:
+        msg: "The system's hostname is {{ ansible_hostname }}"

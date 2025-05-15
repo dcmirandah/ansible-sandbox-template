@@ -1,0 +1,4 @@
+- name: Create a file of 1G filled with null bytes
+  community.general.filesize:
+    path: "{{ file_dest }}"
+    size: "{{ file_size }}"
