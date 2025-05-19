@@ -2,9 +2,6 @@
 *.retry
 *.log
 
-# Inventory
-inventory/
-
 # SSH private keys
 *.pem
 *.key
